@@ -33,6 +33,6 @@ async def roll(ctx, dice: str):
         return
 
     result = ', '.join(str(random.randint(1, dietype)) for n in range(numdie))
-    await ctx.send(result)
+    await ctx.send(f'Fate has granted you: {result}')
 
 client.run(TOKEN)
