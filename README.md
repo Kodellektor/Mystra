@@ -3,7 +3,7 @@ A D&amp;D 5e Discord bot written in Python utilizing the [Discord.py](https://di
 
 ## Why Mystra?
  [Mystra](https://forgottenrealms.fandom.com/wiki/Mystra) is the goddess of Magic and Mysteries. Therefore she's the most appropriate deity to call upon when in doubt. Whether that doubt comes down to rule questions or simply finding out how much damage your rogue is going to dump on your DM's latest BBEG, you can ask Mystra and she will respond. (Otherwise feel free to open a ticket) Originally, I was planning on making Mystra a simple bot to handle dice rolling to maintain clarity in case someone couldn't reach [D&D Beyond](https://www.dndbeyond.com/). However, as I progress as a dev, I wanted to include additional features. 
-### Upcoming features
+## Upcoming features
 I still have to completely finish the class that handles dice rolls to be able to apply multiple rolls(Advantage + Disadvantage) in addition to handling bonuses and automatic damage (i.e. +3, xdx + 4). Though while writing this it has ocurred to me that I have yet to handle some edge cases.
 
 1. **Combat Tracker**: My party struggles with the myriad of things that need to be tracked in combat as they progress in experience. 
