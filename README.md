@@ -39,10 +39,8 @@ I still have to completely finish the class that handles dice rolls to be able t
     * Encounter Tables:
         * These would be fantastic for keeping the party on their toes.
             * Should be able to import monster stat sheets. Would be cool if it sent a monster image to a channel.
-        *
     * Map Generator:
         * This one seems very difficult with python only, I'll have to revisit this one later.
-    * 
 3. **Music/Ambiance**: This one will be a challenge as I'm not too familiar with copyright free fantasy music and ambiance platforms.
 
 4. **More?**
