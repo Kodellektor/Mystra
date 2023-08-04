@@ -6,6 +6,10 @@ A D&amp;D 5e Discord bot written in Python utilizing the [Discord.py](https://di
 ## Upcoming features
 I still have to completely finish the class that handles dice rolls to be able to apply multiple rolls(Advantage + Disadvantage) in addition to handling bonuses and automatic damage (i.e. +3, xdx + 4). Though while writing this it has ocurred to me that I have yet to handle some edge cases.
 
+0. **Encounter Generator**: I'm going to try to make an encounter generator that also modifies the monsters (Think ARPG Monster traits) to give them more of a *random* feeling. 
+    Let's see how it goes!
+
+
 1. **Combat Tracker**: My party struggles with the myriad of things that need to be tracked in combat as they progress in experience. 
     To handle this I will:
     * Handle individual players and their assets
