@@ -4,7 +4,6 @@ import random
 from random import randint, sample
 import os
 from dotenv import load_dotenv
-import diceroni
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -43,7 +42,7 @@ async def encounter(ctx, partystrength: str, difficulty: str):
     
     """Creates an encounter based on party size and level at the difficulty chosen"""
 
-    
+
 
 
 
