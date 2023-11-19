@@ -4,20 +4,16 @@ A D&amp;D 5e Discord bot written in Python utilizing the [Discord.py](https://di
 ## Why Mystra?
  [Mystra](https://forgottenrealms.fandom.com/wiki/Mystra) is the goddess of Magic and Mysteries. Therefore she's the most appropriate deity to call upon when in doubt. Whether that doubt comes down to rule questions or simply finding out how much damage your rogue is going to dump on your DM's latest BBEG, you can ask Mystra and she will respond. (Otherwise feel free to open a ticket) Originally, I was planning on making Mystra a simple bot to handle dice rolling to maintain clarity in case someone couldn't reach [D&D Beyond](https://www.dndbeyond.com/). However, as I progress as a dev, I wanted to include additional features. 
 ## Upcoming features
-I still have to completely finish the class that handles dice rolls to be able to apply multiple rolls(Advantage + Disadvantage) in addition to handling bonuses and automatic damage (i.e. +3, xdx + 4). Though while writing this it has ocurred to me that I have yet to handle some edge cases.
-
-0. **Encounter Generator**: I'm going to try to make an encounter generator that also modifies the monsters (Think ARPG Monster traits) to give them more of a *random* feeling. 
-    Let's see how it goes!
+I still have to completely finish the function that handles dice rolls to be able to apply multiple rolls(Advantage + Disadvantage) in addition to handling bonuses and automatic damage (i.e. +3, xdx + 4). Though while writing this it has ocurred to me that I have yet to handle some edge cases. (non traditional dice and some other errors/unintended input)
 
 
-1. **Combat Tracker**: My party struggles with the myriad of things that need to be tracked in combat as they progress in experience. 
+0. **Combat Tracker**: My party struggles with the myriad of things that need to be tracked in combat as they progress in experience. 
     To handle this I will:
     * Handle individual players and their assets
     * Keep track of the spells they take and spell slots expended (*We* don't really use spell materials, but adding them would be a good additional challenge)
-    * Allow users to query and update their inventory
-    * Use the embeds in discord.py to give brief explanations 
+    * Use embeds in to give brief explanations 
 
-2. **Random Generators**: As a DM, this is a vital one. I'm actually super excited to see how to make these work. 
+1. **Random Generators**: As a DM, this is a vital one. I'm actually super excited to see how to make these work. 
     What I'll focus on first:
     * Taverns: We all love a good place to bunker down after an adventure.
         * Tavern Keeper
@@ -45,9 +41,11 @@ I still have to completely finish the class that handles dice rolls to be able t
             * Should be able to import monster stat sheets. Would be cool if it sent a monster image to a channel.
     * Map Generator:
         * This one seems very difficult with python only, I'll have to revisit this one later.
-3. **Music/Ambiance**: This one will be a challenge as I'm not too familiar with copyright free fantasy music and ambiance platforms.
 
-4. **More?**
+2. **Music/Ambiance**: This one will be a challenge as I'm not too familiar with copyright free fantasy music and ambiance platforms.
+
+3. **More?**
+
 ### What is Mystra built on?
 1. **[Discord.py](https://discordpy.readthedocs.io/en/stable/)**: The API wrapper used to facilitate bot development by taking advantage of the python library [asyncio](https://docs.python.org/3/library/asyncio.html). 
 

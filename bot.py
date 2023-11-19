@@ -6,7 +6,6 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
 CHANNEL = int(os.getenv('CHANNEL_ID'))
 
 client = commands.Bot(command_prefix = '$', intents = discord.Intents.all())
@@ -14,11 +13,14 @@ client = commands.Bot(command_prefix = '$', intents = discord.Intents.all())
 @client.event
 async def on_ready():
     print('Mystra returns from the beyond!')
+    welcome = await client.fetch_channel(CHANNEL)
+    await welcome.send('Mystra returns from the beyond!')
 
-@client.command()
-async def hi(ctx):
-    await ctx.send('Hello!')
-    
+@client.command(aliases = ['shutdown', 'kick', 'close', 'quit'])
+async def banish(ctx):
+    await ctx.send(f'{ctx.author.display_name} has banished Mystra')
+    await client.close()
+
 @client.command()
 async def roll(ctx, dice: str):
     
@@ -41,12 +43,15 @@ async def roll(ctx, dice: str):
 async def encounter(ctx, partystrength: str, difficulty: str):
     
     """Creates an encounter based on party size and level at the difficulty chosen"""
+    pass
+
+@client.command()
+async def loot(ctx):
+    pass
 
 
 
 
 
 
-
-
-client.run(TOKEN)
+client.run(os.getenv('DISCORD_TOKEN'))
