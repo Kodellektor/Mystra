@@ -1,7 +1,3 @@
-/bin
-/pyvenv.cfg
-/users.json
 .env
-/lib64
-/lib
 /Mystra
+__pychache__
