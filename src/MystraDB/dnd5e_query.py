@@ -5,7 +5,8 @@ import os
 def dataObtainer(desired_endpoint = "/api/magic-items/"):
     URL = "https://www.dnd5eapi.co"
 
-    endpoint_data = requests.get(URL + desired_endpoint).json()
+    #should probably add a try/exception clause here
+    endpoint_data = requests.get(URL + desired_endpoint).json() 
     results = endpoint_data["results"] 
 
 #considering i repeat loops here, i'm considering what to change these to streamline process
@@ -34,5 +35,5 @@ def dataObtainer(desired_endpoint = "/api/magic-items/"):
         with open(f"{file_name}.json", 'w') as f:
             f.write(json.dumps(endpoint_objects, indent=4))
         
-#pass desired urls through 
+#pass desired urls through (urls can be found in endpoint.json file in same dir)
 dataObtainer()
