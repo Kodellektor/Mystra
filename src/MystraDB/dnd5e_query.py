@@ -23,8 +23,7 @@ def dataObtainer(desired_endpoint = "/api/magic-items/"):
     file_name = file_name.lower().replace("api", "").replace("/", "")
     
     if os.path.exists(f"{file_name}.json"):
-        with open(f"{file_name}.json", 'w') as f:
-            f.write(json.dumps(endpoint_objects, indent=4))
+        pass
     else:
         f = open(f"{file_name}.json", "x")
         with open(f"{file_name}.json", 'w') as f:
