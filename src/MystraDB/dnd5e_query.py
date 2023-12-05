@@ -1,32 +1,27 @@
 import requests
 import json
 import os
+import sys
 
 def dataObtainer(desired_endpoint = "/api/magic-items/"):
     URL = "https://www.dnd5eapi.co"
-
-    #should probably add a try/exception clause here
-    endpoint_data = requests.get(URL + desired_endpoint).json() 
-    results = endpoint_data["results"] 
-
-#considering i repeat loops here, i'm considering what to change these to streamline process
-    #extract urls from endpoints into list
+    
+    _endpoint_data = requests.get(URL + desired_endpoint).json()
+    if _endpoint_data.status_code != 200:
+        sys.exit(f'Failed to get endpoint: {_endpoint_data}')
+    results = _endpoint_data["results"]
+    
     endpoint_urls = []
     for item in results:
         endpoint_urls.append(URL + item['url'])
 
-    #creates url list to pass through API
     endpoint_objects = []
     for item in endpoint_urls:
         endpoint_objects.append(requests.get(item).json())
     
-
-    #creates file name based on desired endpoint
     file_name = desired_endpoint
-    file_name = file_name.replace("/api/", "").lower()
-    file_name = file_name.replace("/", "")
+    file_name = file_name.lower().replace("api", "").replace("/", "")
     
-    #write results to file in JSON format (could be generators to support lower spec machinery. thinking of turning script into factory)
     if os.path.exists(f"{file_name}.json"):
         with open(f"{file_name}.json", 'w') as f:
             f.write(json.dumps(endpoint_objects, indent=4))
@@ -35,5 +30,4 @@ def dataObtainer(desired_endpoint = "/api/magic-items/"):
         with open(f"{file_name}.json", 'w') as f:
             f.write(json.dumps(endpoint_objects, indent=4))
         
-#pass desired urls through (urls can be found in endpoint.json file in same dir)
 dataObtainer()
